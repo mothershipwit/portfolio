@@ -13,7 +13,7 @@ exports.createPages = ({ actions, graphql }) => {
                     description {
                         description
                     }
-                    images {
+                    image {
                         file {
                             url
                         }
