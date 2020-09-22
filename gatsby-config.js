@@ -7,7 +7,7 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `My First Gatsby Portfolio with GraphQL`,
+    title: `Recipes From My Kitchen`,
     description: `My First Front End Portfolio`,
   },
   plugins: [

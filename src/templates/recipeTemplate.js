@@ -3,11 +3,11 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default function recipeTemplate({data}) {
-    const recipe = data.contentfulRecipes
+    const recipe = data.contentfulFoods
     return (
         <Layout>
             <h2>{recipe.name}</h2>
-            <img src={recipe.image.file.url} alt={recipe.name} class="img-thumbnail" />
+            <img src={recipe.image.file.url} alt={recipe.name} className="img-thumbnail" />
             <p>
                 {recipe.description.description}
             </p>
@@ -17,8 +17,8 @@ export default function recipeTemplate({data}) {
 }
 
 export const query = graphql`
-query MyQuery($ratatouille: String!) {
-    contentfulRecipes(name: {eq: $ratatouille}) {
+query MyQuery($slug: String!) {
+    contentfulFoods(name: {eq: $slug}) {
       image {
         title
         file {

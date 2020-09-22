@@ -7,7 +7,7 @@ exports.createPages = ({ actions, graphql }) => {
   
     return graphql(`
         {
-            allContentfulRecipes {
+            allContentfulFoods {
                 nodes {
                     name
                     description {
@@ -26,7 +26,7 @@ exports.createPages = ({ actions, graphql }) => {
         return Promise.reject(result.errors)
       }
   
-      result.data.allContentfulRecipes.nodes.forEach((node) => {
+      result.data.allContentfulFoods.nodes.forEach((node) => {
         createPage({
             path: node.name,
             component: recipeTemplate,

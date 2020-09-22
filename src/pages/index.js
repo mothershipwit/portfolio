@@ -1,42 +1,49 @@
-const path = require("path")
+import React from "react"
+import Layout from "../components/layout"
+import { graphql } from "gatsby"
 
-exports.createPages = ({ actions, graphql }) => {
-    const { createPage } = actions
-  
-    const recipeTemplate = path.resolve(`src/templates/recipeTemplate.js`)
-  
-    return graphql(`
-        {
-            allContentfulRecipes {
-                nodes {
-                    name
-                    description {
-                        description
-                    }
-                    image {
-                        file {
-                            url
-                        }
-                    }
-                }
-            }
-        }
-    `).then(result => {
-      if (result.errors) {
-        return Promise.reject(result.errors)
+export default function Home({data}) {
+  return (
+    <Layout>
+      <div><h1>Homemade Meals</h1></div>
+
+      <div className="row">
+      {data.allContentfulFoods.nodes.map((node, index) => (
+            <div className="col-md-4">
+              <div className="card mb-4 box-shadow">
+                <img className="card-img-top" src={ node.image.file.url } alt={ node.name } data-holder-rendered="true" />
+                <div className="card-body">
+                  <p className="card-text">{node.name}</p>
+                  <div className="d-flex justify-content-between align-items-center">
+                    <div className="btn-group">
+                      <a href={node.name} className="btn btn-sm btn-outline-primary">View</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        ))}
+      </div>
+      
+
+    </Layout>
+  )
+}
+
+export const query = graphql`
+query MyQuery2 {
+  allContentfulFoods {
+    nodes {
+      name
+      description {
+        description
       }
-  
-      result.data.allContentfulRecipes.nodes.forEach((node) => {
-        createPage({
-            path: node.name,
-            component: recipeTemplate,
-            context: {
-                slug: node.name
-            }, // additional data can be passed via context
-        })
-      })
-    })
-    .catch(error => {
-      console.log("Error retrieving contentful data", error);
-    });
+      image {
+        file {
+          url
+        }
+      }
+    }
   }
+}
+`

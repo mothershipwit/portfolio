@@ -1,5 +1,17 @@
-$color-primary: #090;
+$color-primary: rgba(15, 15, 241, 0.6);
+$color-secondary: #6819c2;
+$color-accent: #47f5e6;
 
 h1 {
     color: $color-primary;
+}
+.btn {
+    padding: 2px 4px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: 4px solid #2d73cf;
+    background-color: $color-accent;
+  }
+body {
+  background-color: rgb(132, 236, 236);
 }
