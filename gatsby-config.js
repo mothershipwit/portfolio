@@ -10,6 +10,7 @@ module.exports = {
     title: `Recipes From My Kitchen`,
     description: `My First Front End Portfolio`,
   },
+
   plugins: [
     {
       resolve: `gatsby-source-contentful`,
@@ -18,7 +19,17 @@ module.exports = {
         accessToken: `-kmhykSmRgcw9HetLADSMZowqmM8ZcelQQ3QyvHE15E`,
     },
   },
-  `gatsby-plugin-sass`
+  `gatsby-plugin-sass`,
+  {
+    resolve: `gatsby-plugin-google-fonts`,
+    options: {
+      fonts: [
+        `limelight`,
+        `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+      ],
+      display: 'swap'
+    }
+  }
 ],
 }
     
