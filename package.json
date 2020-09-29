@@ -17,6 +17,7 @@
     "bootstrap": "^4.5.2",
     "firebase": "^7.20.0",
     "gatsby": "^2.24.50",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-sass": "^2.3.13",
     "gatsby-source-contentful": "^2.3.47",
     "node-sass": "^4.14.1",

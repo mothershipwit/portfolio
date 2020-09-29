@@ -2,10 +2,17 @@ $color-primary: rgba(15, 15, 241, 0.6);
 $color-secondary: #6819c2;
 $color-accent: #47f5e6;
 
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&family=Miriam+Libre:wght@700&family=Playfair+Display:ital,wght@1,700&display=swap');
+
+
+
 h1 {
     color: $color-primary;
+    font-family: 'Miriam Libre', sans-serif;
+    font-family: 'Playfair Display', serif;
 }
 .btn {
+  font-family: 'Dosis', sans-serif;
     padding: 2px 4px;
     font-size: 30px;
     border-radius: 10px;
