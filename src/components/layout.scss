@@ -28,6 +28,9 @@ label {
 li {
   color: $color-accent;
 }
+p {
+  Color: white;
+  }
 
 
 .btn {
@@ -44,7 +47,7 @@ body {
   font-family: 'Indie Flower', cursive;
   font-family: 'Roboto Mono', monospace;
   background-image: url("../../static/images/space.jpg");
-  background-position: absolute;
+  background-size: cover;
 }
 
 img {

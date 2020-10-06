@@ -12,7 +12,7 @@ export default function About() {
               <h2>My name is Witni and I am a mom of 4 that loves food.
                 I love to support local Restaurants, as well as cooking
                 my families scratch made meals.
-                <img src="images/portpic.jpg"></img>
+                <img src="images/portpic.jpg" alt="Portfolio Shot"></img>
            </h2>           
             </p>
             </div>
